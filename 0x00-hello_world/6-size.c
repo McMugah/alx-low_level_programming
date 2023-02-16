@@ -1,4 +1,4 @@
-  GNU nano 4.8                                       6-size.c                                                  #include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
