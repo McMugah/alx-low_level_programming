@@ -1,8 +1,7 @@
 /*
  * File: 100-atoi.c
- * Auth: Brennan D Baraban
+ * Auth: Boniface Ochieng
  */
-
 #include "main.h"
 /**
  * _atoi - Converts a string to an integer.
