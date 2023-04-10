@@ -1,19 +1,15 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * clear_bit - sets the value of a bit to 0.
- * at a given index.
- * pointer of an unsigned long int.
- * index of the bit.
- *
- * Return: 1 if it worked, -1 if it didn't.
+ * clear_bit - sets the value of a bit to 0 at a given index
+ * @n: parameter
+ * @index: index
+ * Return: 1 if works, -1 if error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-unsigned int capacity;
-if (index > 63)
+if (index > sizeof(n) * 8)
 return (-1);
-capacity = 1 << index;
-if (*n & capacity)
-*n ^= capacity;
+*n &= ~(1 << index);
 return (1);
 }
