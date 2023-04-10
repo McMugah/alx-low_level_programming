@@ -1,19 +1,21 @@
 #include "main.h"
 /**
- * flip_bits - returns the number of bits you would
- * need to flip to get from one number to another
- * number one.
- * number two.
- *
- * Return: number of bits.
+ * flip_bits - number of bits you would need to flip
+ * to get from one number to another
+ * @n: parameter
+ * @m: destiny
+ * Return: nflips
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned int ron;
-for (ron = 0; n || m; n >>= 1, m >>= 1)
+unsigned int cat, nflips = 0;
+unsigned long int bon = sizeof(unsigned long int) * 8;
+for (cat = 0; cat < bon; cat++)
 {
-if ((n & 1) != (m & 1))
-ron++;
+if ((m & 1) != (n & 1))
+nflips += 1;
+n = n >> 1;
+m = m >> 1;
 }
-return (ron);
+return (nflips);
 }
